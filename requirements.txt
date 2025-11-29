@@ -1,0 +1,11 @@
+# Core Framework
+fastapi[standard]
+uvicorn[standard]
+
+# Configuration
+pydantic
+pydantic-settings
+python-dotenv
+
+
+httpx
