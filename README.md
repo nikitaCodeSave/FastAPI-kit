@@ -80,7 +80,7 @@ FastAPI-kit — это референсная реализация FastAPI-пр�
 ### Требования
 
 - Python 3.12+
-- pip или poetry
+- pip
 
 ### Установка
 
@@ -107,7 +107,7 @@ cp .env.example .env
 ```bash
 # Из корня проекта
 cd backend
-fastapi dev src/main.py --reload
+fastapi run src/main.py --reload
 
 # Или напрямую через uvicorn
 uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
