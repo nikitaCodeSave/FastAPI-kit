@@ -7,10 +7,10 @@
 import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from example.exceptions import ExampleAlreadyExistsError, ExampleNotFoundError
-from example.repository import ExampleRepository
-from example.schemas import ExampleCreate, ExampleUpdate
-from example.service import ExampleService
+from src.example.exceptions import ExampleAlreadyExistsError, ExampleNotFoundError
+from src.example.repository import ExampleRepository
+from src.example.schemas import ExampleCreate, ExampleUpdate
+from src.example.service import ExampleService
 
 
 @pytest.fixture

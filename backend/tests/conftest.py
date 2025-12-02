@@ -11,14 +11,13 @@ import pytest
 from httpx import ASGITransport, AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
-import sys
-from pathlib import Path
+# Импорты с префиксом src. для консистентности с остальным проектом
+from src.database import Base, get_db
+from src.main import app
 
-# Добавить src в path для импортов
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
-
-from database import Base, get_db
-from main import app
+# ВАЖНО: Явный импорт всех моделей для регистрации в Base.metadata
+# При добавлении новых моделей — добавляйте их сюда
+from src.example.models import Example  # noqa: F401
 
 
 @pytest.fixture(scope="session")

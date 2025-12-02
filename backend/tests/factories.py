@@ -17,7 +17,7 @@
     example_data = ExampleCreateFactory.build()
 """
 
-from example.schemas import ExampleCreate
+from src.example.schemas import ExampleCreate
 
 
 def make_example_create(
