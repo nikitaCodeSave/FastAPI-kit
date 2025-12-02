@@ -17,6 +17,9 @@ structlog
 # HTTP Client
 httpx
 
+# AI/LLM
+mistralai
+
 # Testing
 pytest
 pytest-asyncio

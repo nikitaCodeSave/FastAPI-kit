@@ -13,7 +13,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file="../.env",  # .env в корне проекта, запуск из backend/
         env_file_encoding="utf-8",
         extra="ignore",
     )
@@ -29,6 +29,9 @@ class Settings(BaseSettings):
 
     # Database
     DATABASE_URL: str = "sqlite+aiosqlite:///./app.db"
+
+    # Mistral AI
+    MISTRAL_API_KEY: str
 
     # Database pool settings (for PostgreSQL, ignored for SQLite)
     DB_POOL_SIZE: int = 5

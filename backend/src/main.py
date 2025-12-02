@@ -26,6 +26,7 @@ from src.shared.exceptions import DomainError
 
 # Import routers
 from src.example.router import router as example_router
+from src.mistral.router import router as mistral_router
 
 # Инициализация логирования должна происходить до создания логгера
 setup_logging()
@@ -164,6 +165,7 @@ def create_application() -> FastAPI:
     # ─────────────────────────────────────────────────────────────
 
     app.include_router(example_router, prefix="/api/v1/examples", tags=["Examples"])
+    app.include_router(mistral_router, prefix="/api/v1/mistral", tags=["Mistral AI"])
 
     return app
 
